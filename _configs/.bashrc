@@ -123,10 +123,14 @@ fi
 export VISUAL=nvim
 export EDITOR=nvim
 
+# Colors for term
+
 # Алиасы
 alias bashrc="vim ~/.bashrc && . ~/.bashrc"
 alias vimrc="vim ~/.config/nvim/init.vim"
 alias i3rc="vim ~/.config/regolith/i3/config"
+alias kittyrc="vim /home/fenrir/.config/kitty/kitty.conf"
+
 alias xclip="xclip -sel clip"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

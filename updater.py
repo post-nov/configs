@@ -1,5 +1,5 @@
 """
-Обновляет и пушит локальные настройки программ
+Сохраняет текущие настройки в папочку _configs
 """
 
 __author__ = 'post-nov'
@@ -14,6 +14,8 @@ USERNAME = os.getlogin()
 CONFIGS = [
     f'/home/{USERNAME}/.bashrc',
     f'/home/{USERNAME}/.config/nvim/init.vim',
+    f'/home/{USERNAME}/.config/regolith/i3/config',
+    f'/home/{USERNAME}/.config/kitty/kitty.conf',
 ]
 
 
@@ -32,14 +34,7 @@ def config_copier():
         shutil.copy(src, dst, follow_symlinks=True)
 
 
-def config_pushier():
-    """
-    Пушит существующие настройки в настроенный репозиторий
-    """
-
-    pass
-
-
 if __name__ == '__main__':
     config_copier()
+    print('Settings updated for:\n{}'.format("\n".join(CONFIGS)))
 
