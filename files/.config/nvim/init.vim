@@ -31,12 +31,15 @@ Plug 'joshdick/onedark.vim'
 Plug 'cocopon/iceberg.vim'
 " Folding
 Plug 'tmhedberg/SimpylFold'
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 " Django
 Plug 'jmcomets/vim-pony'
 call plug#end()
 
 " Украшательства
-set number
+set relativenumber
 set ruler
 
 " Комбинация клавиш jkl - действует как Escape в режиме Insert

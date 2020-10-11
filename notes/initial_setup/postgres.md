@@ -14,7 +14,7 @@
 
 and change "peer" to "md5" on the line concerning postgres:
 
-`local      all     postgres     peer md5`
+`local      all     postgres     ~~peer~~ md5`
 
 To know what version of postgresql you are running, look for the version folder under /etc/postgresql. Also, you can use Nano or other editor instead of VIM.
 
@@ -22,9 +22,9 @@ To know what version of postgresql you are running, look for the version folder 
 
 `sudo /etc/init.d/postgresql restart`
 
-(Here you can check if it worked with psql -U postgres).
+*(Here you can check if it worked with psql -U postgres)*.
 
-5. Create a user having the same name as you (to find it, you can type whoami):
+5. Create a user having the same name as you (to find it, you can type *whoami*):
 
 `sudo createuser -U postgres -d -e -E -l -P -r -s <my_name>`
 
@@ -34,7 +34,7 @@ Beware of passwords: it will first ask you twice the new password (for the new u
 
 6. Again, edit the pg_hba.conf file (see step 3 above), and change "peer" to "md5" on the line concerning "all" other users:
 
-    local      all     all     peer md5
+`local      all     all     ~~peer~~ md5`
 
 7. Restart (like in step 4), and check that you can login without -U postgres:
 
