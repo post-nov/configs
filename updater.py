@@ -1,5 +1,5 @@
 """
-Сохраняет текущие настройки в папочку _configs
+Сохраняет текущие настройки в папочку files
 """
 
 __author__ = 'post-nov'
@@ -7,7 +7,7 @@ __author__ = 'post-nov'
 import os
 import shutil
 
-CURRENT_DIR = f'{os.getcwd()}/_configs'
+CURRENT_DIR = f'{os.getcwd()}/files'
 HOME_DIR = os.path.expanduser('~')
 USERNAME = os.getlogin()
 
@@ -21,7 +21,7 @@ CONFIGS = [
 
 def config_copier():
     """
-    Сохраняет локальные настройки в папочку _configs
+    Сохраняет локальные настройки в папочку files
     """
 
     for src in CONFIGS:

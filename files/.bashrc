@@ -119,17 +119,28 @@ fi
 
 # Мои настройки
 
+source ~/.bash_env.sh
+
 # Базовый редактор - nvim
 export VISUAL=nvim
 export EDITOR=nvim
 
+# Где питону искать установленные пакеты
+# modules and packages 
+export PYTHONPATH=${PYTHONPATH}:${HOME}/.local/bin
+
 # Colors for term
 
-# Алиасы
-alias bashrc="vim ~/.bashrc && . ~/.bashrc"
-alias vimrc="vim ~/.config/nvim/init.vim"
-alias i3rc="vim ~/.config/regolith/i3/config"
-alias kittyrc="vim /home/fenrir/.config/kitty/kitty.conf"
+# Файлы настроек
+alias bashconf="vim ~/.bashrc && . ~/.bashrc"
+alias vimconf="vim ~/.config/nvim/init.vim"
+alias i3conf="vim ~/.config/regolith/i3/config"
+alias kittyconf="vim ~/.config/kitty/kitty.conf"
+
+# Особые пути
+alias gonotes="cd ~/Code/configs/notes"
+alias gocode="cd ~/Code"
+alias goss="cd ~/Code/projects/same_sheet"
 
 alias xclip="xclip -sel clip"
 

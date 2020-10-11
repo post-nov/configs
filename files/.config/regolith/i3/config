@@ -175,7 +175,7 @@ bindsym $mod+Ctrl+Shift+Up move workspace to output up
 bindsym $mod+Ctrl+Shift+Right move workspace to output right
 
 ## Modify // Next Window Orientation // <> Backspace ##
-bindsym $mod+BackSpace split toggle
+bindsym $mod+v split toggle
 
 ## Modify // Window Fullscreen Toggle // <> f ##
 bindsym $mod+f fullscreen toggle

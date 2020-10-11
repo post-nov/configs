@@ -17,8 +17,12 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
 " Проверка Синтаксиса
 Plug 'scrooloose/syntastic' 
+Plug 'nvie/vim-flake8'
 " Плагин автозавершения
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
+" Закрывашка для ", [, (, {..
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 " Поддержка Python
 Plug 'klen/python-mode'
 Plug 'vim-scripts/indentpython.vim'
@@ -27,6 +31,8 @@ Plug 'joshdick/onedark.vim'
 Plug 'cocopon/iceberg.vim'
 " Folding
 Plug 'tmhedberg/SimpylFold'
+" Django
+Plug 'jmcomets/vim-pony'
 call plug#end()
 
 " Украшательства
@@ -55,6 +61,9 @@ let g:NERDTreeIgnore = ['^node_modules$']
 
 " Тема для **NeoVim**
 syntax on
+" Лютый костыль, но почему-то если сначала выставить цвета терминала, 
+" а затем цветовую схему, то все работает 
+set termguicolors
 colorscheme iceberg
 
 " Линия статуса: конфигурация
@@ -71,7 +80,7 @@ let g:lightline = {
       \ },
       \ }
 	
-" Питоновские настройк  и
+" Питоновские настройки
 set ts=4
 set autoindent
 set shiftwidth=4
